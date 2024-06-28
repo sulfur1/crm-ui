@@ -5,17 +5,12 @@ import { FormsModule, FormGroup, FormControl, Validators, FormBuilder, ReactiveF
   selector: 'app-login',
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule],
-  template: `
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <input type="text" formControlName="username" placeholder="Username">
-      <input type="password" formControlName="password" placeholder="Password">
-      <button type="submit">Login</button>
-    </form>
-  `
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
   loginForm = this.fb.group({
-    username: ['', [Validators.required]],
+    email: ['', [Validators.required]],
     password: ['', [Validators.required]]
   });
 
