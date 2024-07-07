@@ -6,7 +6,7 @@ import { FormsModule, FormGroup, FormControl, Validators, FormBuilder, ReactiveF
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   loginForm = this.fb.group({

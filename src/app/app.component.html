@@ -1,2 +1,9 @@
+<router-outlet/>
 
-<router-outlet />
+<div class="customer-card__wrapper">
+  @for (customer of customers; track customer.telegramId) {
+    <app-customer-card
+      [customer]="customer"
+    ></app-customer-card>
+  }
+</div>

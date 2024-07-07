@@ -1,0 +1,15 @@
+:root {
+  --dark-color: #000000;
+  --light-color: #FFFFFF;
+}
+
+body {
+  height: 100dvh;
+  font-family: "JetBrains Mono", sans-serif;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  background-image: url(/assets/imgs/background.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
