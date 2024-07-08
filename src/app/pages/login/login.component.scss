@@ -1,0 +1,54 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100dvh;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.login-form {
+  width: 440px;
+}
+
+.login-form,
+.big-logo {
+  place-self: center;
+}
+.ip-logo {
+  width: 400px;
+  height: 400px;
+  place-self: center;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-button {
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-eye-button.active {
+  color: var(--primary-color);
+}
+
+.username-input {
+  position: relative;
+}
+
+.username-icon-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
