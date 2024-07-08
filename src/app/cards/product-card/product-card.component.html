@@ -1,0 +1,15 @@
+@if (product) {
+  <div class="product-card">
+    <h2>{{ product.summary }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.priceDto.value }} {{ product.priceDto.currency.currency }}</p>
+    <p>Duration: {{ product.durationDto.inDays }} days</p>
+    <p>Status: {{ product.active ? 'Active' : 'Inactive' }}</p>
+    <div *ngFor="let discount of product.discountDtos">
+      <p>Discount: {{ discount.value }}%</p>
+      <p>From: {{ discount.dateTimeFrom }}</p>
+      <p>Until: {{ discount.dateTimeUntil }}</p>
+      <p>Status: {{ discount.active ? 'Active' : 'Inactive' }}</p>
+    </div>
+  </div>
+}

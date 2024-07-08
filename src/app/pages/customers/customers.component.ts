@@ -1,7 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {CustomerService} from "../../data/services/customer.service";
 import {Customer} from "../../data/interfaces/customer.interface";
-import {CustomerCardComponent} from "../../customer-card/customer-card.component";
+import {CustomerCardComponent} from "../../cards/customer-card/customer-card.component";
 
 @Component({
   selector: 'app-customers',
