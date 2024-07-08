@@ -33,6 +33,11 @@ export class SidebarComponent {
       link: 'customers'
     },
     {
+      label: 'Products',
+      icon: 'products',
+      link: 'products'
+    },
+    {
       label: 'Search',
       icon: 'search',
       link: 'search'
