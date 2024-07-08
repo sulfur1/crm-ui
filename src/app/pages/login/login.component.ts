@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import { FormsModule, FormGroup, FormControl, Validators, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-login',
@@ -9,17 +11,27 @@ import { FormsModule, FormGroup, FormControl, Validators, FormBuilder, ReactiveF
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  loginForm = this.fb.group({
-    email: ['', [Validators.required]],
-    password: ['', [Validators.required]]
-  });
+  router = inject(Router)
 
-  constructor(private fb: FormBuilder) {}
+  isPasswordVisible = signal<boolean>(false)
+
+  form = new FormGroup({
+    username: new FormControl(null, Validators.required),
+    password: new FormControl(null, Validators.required),
+  })
 
   onSubmit() {
-    if (this.loginForm.valid) {
-      console.log(this.loginForm.value);
-      // Здесь должна быть логика аутентификации
+    if(this.form.valid) {
+
+      //@ts-ignore
+      this.authService.login(this.form.value)
+        .subscribe( (res: any) => {
+            this.router.navigate([''])
+            console.log(res)
+          }
+
+        )
     }
+
   }
 }

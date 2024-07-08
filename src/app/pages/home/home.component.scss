@@ -1,0 +1,23 @@
+:host {
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  line-height: 56px;
+  font-family: 'Furore', sans-serif;
+  font-weight: 420;
+  font-size: 40px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.intro-logo {
+  width: 100%;
+}
+
