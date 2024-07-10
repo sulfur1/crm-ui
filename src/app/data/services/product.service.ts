@@ -8,9 +8,13 @@ import {Product} from "../interfaces/product.interface";
 export class ProductService {
   http = inject(HttpClient)
 
-  customerApiUrl = "https://localhost/api/v1/"
+  productApiUrl = "https://localhost/api/v1/"
 
   getProducts() {
-    return this.http.get<Product[]>(`${this.customerApiUrl}products/all`)
+    return this.http.get<Product[]>(`${this.productApiUrl}products/all`)
+  }
+
+  getProductById(productId: number) {
+    return this.http.get<Product>(`${this.productApiUrl}products/${productId}`)
   }
 }

@@ -10,6 +10,7 @@ import {LayoutComponent} from "./common-ui/layout/layout.component";
 import {SearchPageComponent} from "./pages/search-page/search-page.component";
 import {ProfilePageComponent} from "./pages/profile-page/profile-page.component";
 import {ProductPageComponent} from "./pages/product-page/product-page.component";
+import {InquiryPageComponent} from "./pages/inquiry-page/inquiry-page.component";
 
 export const appRoutes: Routes =[
   {
@@ -17,6 +18,7 @@ export const appRoutes: Routes =[
       {path: 'home', component: HomeComponent},
       {path: "customers", component: CustomersComponent},
       {path: "products", component: ProductPageComponent},
+      {path: "inquiries", component: InquiryPageComponent},
       {path: "search", component: SearchPageComponent},
       {path: "profile/me", component: ProfilePageComponent},
     ]
