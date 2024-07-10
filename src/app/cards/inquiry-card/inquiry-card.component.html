@@ -1,0 +1,14 @@
+@if (inquiry) {
+  <div class="inquiry-card">
+    <h2>Inquiry ID {{ inquiry.id }}</h2>
+    <h3>Manager ID {{ inquiry.managerRefId}}</h3>
+    <p><strong>Source:</strong> {{ inquiry.sourceId.name }}</p>
+    <p><strong>Comment:</strong> {{ inquiry.comment }}</p>
+    <p><strong>Note:</strong> {{ inquiry.note}}</p>
+    <p><strong>Product description:</strong> {{ productDescription }}</p>
+    <p><strong>Customer Name:</strong> {{ customerName }}</p>
+    <p><strong>Customer Lastname:</strong> {{ customerSecondName }}</p>
+    <p><strong>Customer TelegramId:</strong> {{ customerTelegramId }}</p>
+    <p><strong>Customer email:</strong> {{ customerEmail }}</p>
+  </div>
+}

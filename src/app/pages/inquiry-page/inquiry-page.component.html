@@ -1,0 +1,9 @@
+<h1>Inquiries</h1>
+<div class="inquiry-card__wrapper">
+  @for (inquiry of inquiries; track inquiry.id) {
+    <app-inquiry-card
+      [inquiry]="inquiry"
+    ></app-inquiry-card>
+  }
+
+</div>

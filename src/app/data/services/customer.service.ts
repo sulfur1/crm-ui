@@ -14,4 +14,8 @@ export class CustomerService {
   getCustomers() {
     return this.http.get<Customer[]>(`${this.customerApiUrl}customers`)
   }
+
+  getCustomerById(id: number) {
+    return this.http.get<Customer>(`${this.customerApiUrl}customers/${id}`)
+  }
 }
